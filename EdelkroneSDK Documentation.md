@@ -1,10 +1,10 @@
----
-aliases:
-  - SDK
-tags:
-  - Software
-hersteller: "[[Edelkrone]]"
-id: 01H6H92FP29053QV59SCG1YFPM
+**Disclaimer:**
+The documentation provided in this repository for the edelkrone Web App is the official documentation from edelkrone. It is included here for convenience and accessibility to users interested in exploring and working with the edelkrone Web App.
+
+Please note that the owner of this repository did not author the documentation content. Any questions, concerns, or issues related to the official documentation should be directed to edelkrone's support or development team.
+
+The edelkrone Web App and its documentation are subject to the original licensing terms set by edelkrone. Please review the licensing information in the respective documentation or the LICENSE file in this repository.
+
 ---
 # HTTP Endpoints
 
