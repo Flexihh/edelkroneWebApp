@@ -1,0 +1,275 @@
+// Box
+.box {
+  text-align: left;
+  line-height: 24px;
+  padding: 16px;
+  font-weight: 400;
+  font-size: 12px;
+  @include pattren;
+}
+.box--safe {
+  @include pattren(#16c055, rgba(0,0,0,0.10));
+}
+.box--danger {
+  @include pattren(#ff5454, rgba(0,0,0,0.10));
+}
+.box--safe,
+.box--danger {
+  text-align: center;
+  padding: 8px;
+  .box-content {
+    line-height: 0;
+  }
+}
+.box--detect {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  padding-left: 72px;
+  img {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    width: 36px;
+  }
+  span {
+    font-weight: 700;
+    color: #ff5454;
+  }
+}
+
+// Screen
+.screen--link-pairing,
+.screen--vision {
+  .box-content__item--copy {
+    line-height: 16px;
+    padding-right: 16px;
+    .icon {
+      img {
+        width: 12px;
+      }
+    }
+    &:active {
+      span > span {
+        background: rgba(37, 189, 184, 0.4);
+      }
+    }
+  }
+}
+.screen--vision {
+  .box-content__item--copy {
+    margin-top: 4px;
+  }
+}
+.screen--device-pairing--canbus {
+  .box-button__title {
+    line-height: 30px;
+  }
+}
+
+// Box / Title
+.box__title {
+  font-size: 14px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+// Box / Content
+.box-content {
+  line-height: 18px;
+  .box-content__item--product:last-child {
+    padding-bottom: 0;
+  }
+}
+// Box / Content / Item
+.box-content__item--product {
+  position: relative;
+  line-height: 20px;
+  padding-bottom: 8px;
+  padding-left: 28px;
+  .icon {
+    line-height: 0;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    img {
+      width: 20px;
+    }
+  }
+}
+.box-content__item--warning {
+  position: relative;
+  line-height: 24px;
+  padding-left: 22px;
+  font-weight: 700;
+  display: inline-block;
+  max-width: 100%;
+  @include truncate;
+  .icon {
+    line-height: 0;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    img {
+      width: 16px;
+    }
+  }
+}
+.box-content__item--copy {
+  position: relative;
+  display: inline-block;
+  max-width: 100%;
+  overflow: hidden;
+  line-height: 20px;
+  padding-left: 0;
+  padding-right: 20px;
+  cursor: pointer;
+  @include truncate;
+  .icon {
+    line-height: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    img {
+      width: 14px;
+    }
+  }
+  &:active {
+    span > span {
+      background: rgba(255, 255, 255, 0.4);
+    }
+  }
+}
+
+// Box Button
+.box-button {
+  border-radius: 3px;
+  box-shadow: inset 0px 6px 3px -6px rgba(255,255,255,0.25);
+}
+.box-button--action {
+  cursor: pointer;
+}
+
+// Box Button / Title
+.box-button__title {
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: 700;
+  p {
+    font-weight: 400;
+    display: inline;
+  }
+  span {
+    display: inline;
+  }
+}
+
+// Box Button / Desc
+.box-button__desc {
+  font-size: 12px;
+  line-height: 16px;
+  color: #25bdb8;
+  font-weight: 400;
+}
+.box-button__desc--error {
+  color: #ff5454;
+}
+.box-button__desc--info {
+  color: #979797;
+  padding-top: 6px;
+}
+
+// Box Button / Icon
+.box-button__icon {
+  line-height: 0;
+  img {
+    height: 14px;
+  }
+}
+.box-button__icon--cable {
+  img {
+    height: 18px;
+  }
+}
+.box-button__icon--empty {
+  width: 0;
+}
+
+// Box Button / Radio
+.box-button__radio {
+  cursor: pointer;
+  display: inline-block;
+}
+.box-button__radio-title {
+  line-height: 30px;
+  font-size: 12px;
+  font-weight: 700;
+}
+.box-button__radio--disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+.box-button__radio--selected {
+  .box-button__radio-icon {
+    background: #0a4f4d;
+  }
+}
+.box-button__radio-icon {
+  position: relative;
+  display: inline-block;
+  line-height: 0;
+  width: 60px;
+  height: 30px;
+  background: #252728;
+  box-shadow: inset 0px -1px 1px 0px rgba(255, 255, 255, 0.05), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 30px;
+  transition: 0.1s;
+}
+.box-button__radio-icon-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  background: #00aea8;
+  box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.8), 0 4px 8px 0px #000000;
+  border-radius: 30px;
+  transition: 0.1s;
+}
+.box-button__radio-icon-circle-inner {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 24px;
+  height: 24px;
+  border-radius: 24px;
+  background-image: linear-gradient(0deg, #40c2be 0%, #018581 100%);
+  box-shadow: inset 0px -1px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.box-button__radio input:checked + .box-button__radio-icon {
+  background: #0a4f4d;
+  .box-button__radio-icon-circle {
+    left: 30px;
+  }
+}
+
+// Box Button / Unpair
+.box-button__unpair-message {
+  font-size: 12px;
+  line-height: 20px;
+  color: #ea6262;
+  padding-right: 16px;
+}
+.box-button__unpair-close {
+  padding: 14px 0;
+  label {
+    cursor: pointer;
+    display: block;
+  }
+  .icon {
+    line-height: 0;
+    img {
+      width: 28px;
+    }
+  }
+}

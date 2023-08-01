@@ -1,0 +1,68 @@
+// Connection Problem
+.connection-problem {
+  padding: 80px 16px;
+  line-height: 0;
+  .icon {
+    display: inline-block;
+    line-height: 0;
+    img {
+      height: 56px;
+    }
+  }
+}
+.connection-problem__message {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #25bdb8;
+  padding-left: 80px;
+  padding-right: 80px;
+}
+.connection-problem__buttons {
+  margin-top: 16px;
+}
+
+// Connection Problem / Modal
+.connection-problem-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.connection-problem-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.connection-problem-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.connection-problem-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 448px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 2px #171b1b;
+  background: #000000;
+}

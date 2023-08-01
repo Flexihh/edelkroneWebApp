@@ -1,0 +1,78 @@
+// Top Bottom
+.top-bottom {
+  padding: 16px;
+}
+.top-bottom__title-desc {
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  max-width: 200px;
+  margin: 24px auto 0 auto;
+}
+.top-bottom__title {
+  font-size: 18px;
+  line-height: 20px;
+  font-weight: 700;
+}
+.top-bottom__buttons {
+  margin: 24px 0;
+}
+
+// Top Bottom / Modal
+.top-bottom-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.top-bottom-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.top-bottom-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.top-bottom-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 448px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 6px;
+  @include pattren(#1d5652);
+}
+.top-bottom-modal__close {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  text-align: center;
+  z-index: 4;
+  top: 16px;
+  right: 16px;
+  cursor: pointer;
+  line-height: 0;
+  img {
+    width: 28px;
+  }
+}

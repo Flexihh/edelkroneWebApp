@@ -1,0 +1,62 @@
+// Skip Update
+.skip-update {
+  padding: 40px 16px;
+  .button {
+    margin-bottom: 6px;
+  }
+  .button:last-child {
+    margin-bottom: 0;
+  }
+}
+.skip-update__title {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 700;
+  max-width: 276px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+// Skip Update / Modal
+.skip-update-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.skip-update-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.skip-update-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.skip-update-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 448px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 6px;
+  @include pattren(#1d5652);
+}

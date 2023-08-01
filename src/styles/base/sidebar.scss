@@ -1,0 +1,114 @@
+// Sidebar
+.sidebar {
+  position: relative;
+  height: 650px;
+  margin-left: 18px;
+  margin-right: 16px;
+  &::before {
+    display: inline-block;
+    content: "";
+    position: absolute;
+    background: #171b1b;
+    width: 2px;
+    left: -18px;
+    top: 40px;
+    bottom: 0;
+    border-radius: 2px;
+    @include xs {
+      display: none;
+    }
+  }
+  @include xs {
+    height: auto;
+    margin-top: 16px;
+    margin-left: 16px;
+    margin-right: 16px;
+    margin-bottom: 16px;
+  }
+}
+
+// Screen
+.screen--loading--wireless,
+.screen--loading--canbus,
+.screen--firmware-update--radio {
+  .sidebar {
+    @include xs {
+      margin-top: 0;
+    }
+  }
+}
+.screen--link-pairing {
+  .sidebar-footer {
+    @include xs {
+      margin-top: 0;
+    }
+  }
+}
+
+// Sidebar / Header
+.sidebar-header {
+  margin-top: 40px;
+  display: inline-block;
+  text-decoration: none;
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 16px;
+  cursor: pointer;
+  color: #ffffff;
+  @include xs {
+    display: none;
+  }
+}
+.sidebar-header__icon {
+  line-height: 0;
+  margin-bottom: -4px;
+  svg {
+    fill: #ffffff;
+    height: 16px;
+  }
+}
+.sidebar-header__title {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.sidebar-header__version {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #979797;
+  line-height: 12px;
+}
+
+// Sidebar / Content
+.sidebar-content {
+  .box {
+    margin-bottom: 6px;
+  }
+  .box:last-child {
+    margin-bottom: 0;
+  }
+}
+
+// Sidebar / Footer
+.sidebar-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  @include xs {
+    margin-top: 16px;
+    position: relative;
+    bottom: auto;
+    left: auto;
+    display: none;
+  }
+  .buttons {
+    display: block;
+  }
+  .wrap .col .button {
+    margin-top: 6px;
+  }
+  .wrap .col:first-child .button {
+    margin-top: 0;
+  }
+}

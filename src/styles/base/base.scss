@@ -1,0 +1,141 @@
+// Base
+*, *:before, *:after {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: 'liga';
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  outline: 0;
+  background: transparent;
+  border: 0;
+  border-style: solid;
+}
+html {
+  overflow: hidden;
+  @include xs {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  color: #ffffff;
+  line-height: 24px;
+  background: #171b1b;
+  text-align: center;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-touch-callout: none;
+  user-select: none;
+  @include xs {
+    background: #000000;
+  }
+}
+var {
+  font-style: normal;
+}
+::selection {
+  background: #25bdb8;
+  color: #ffffff;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-size: 16px;
+}
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+textarea {
+  resize: none;
+}
+[placeholder]:empty:before {
+  content: attr(placeholder);
+}
+
+// IE
+input::-ms-check {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter: alpha(opacity=0);
+  opacity: 0;
+}
+input::-ms-clear, input::-ms-reveal, select::-ms-expand {
+  display: none;
+}
+
+// Helpers
+.xl-pr {
+  position: relative;
+}
+.xl-lh0 {
+  line-height: 0;
+}
+.xl-oh {
+  overflow: hidden;
+}
+
+// Space
+.space-16 {
+  height: 16px;
+}
+
+// Dummy
+.dummy {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+// No Scroll
+.noscroll {
+  overflow: hidden;
+  @include xs {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+  }
+  body {
+    overflow: hidden;
+    height: 100vh;
+  }
+}
+
+// Scale
+.scale {
+  @include xs {
+    width: 100%;
+    display: block;
+    width: 480px;
+    margin: 0 auto;
+  }
+}
+
+// Screen
+.screen {
+  width: 100%;
+  display: block;
+  max-width: 700px;
+  margin: 0 auto;
+  position: relative;
+  background: #000000;
+  padding-bottom: 0;
+  min-height: calc(650px + 16px);
+  @include xs {
+    max-width: 480px;
+    min-height: 100%;
+  }
+}

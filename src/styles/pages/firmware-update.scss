@@ -1,0 +1,97 @@
+// Firmware Update
+.firmware-update {
+  padding: 40px 16px 16px 16px;
+  text-align: center;
+  @include xs {
+    padding: 16px 16px 0 16px;
+  }
+  .button--firmware {
+    margin-bottom: 16px;
+  }
+}
+
+// Firmware Update / Device & Radio
+.firmware-update-device {
+  margin-bottom: 16px;
+}
+.firmware-update-device,
+.firmware-update-radio {
+  width: 100%;
+  display: table;
+  height: 297px;
+  line-height: 0;
+  @include pattren;
+  @include xs {
+    height: auto;
+  }
+}
+.firmware-update-device__inner,
+.firmware-update-radio__inner {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+// Firmware Update / Warning
+.firmware-update-warning {
+  .firmware-update-header,
+  .button--firmware {
+    color: #ff5454;
+  }
+  .button--firmware {
+    margin-bottom: 0;
+  }
+}
+
+// Firmware Update / Header
+.firmware-update-header {
+  padding: 16px;
+  text-align: center;
+  color: #25bdb8;
+}
+.firmware-update-header__title {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;  
+}
+.firmware-update-header__desc {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 400;
+}
+
+// Firmware Update / Content
+.firmware-update-content {
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 16px;
+  max-height: 99px;
+  overflow: auto;
+  text-align: left;
+  width: 280px;
+  display: inline-block;
+  strong {
+    font-weight: 700;
+  }
+  ul {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 14px;
+    line-height: 18px;
+  }
+  @include xs {
+    max-height: 100%;
+  }
+}
+
+// Firmware Update / Info
+.firmware-update-info {
+  font-size: 12px;
+  line-height: 18px;
+  color: #979797;
+  padding-top: 6px;
+  padding-bottom: 16px;
+}

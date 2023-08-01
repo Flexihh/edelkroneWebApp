@@ -1,0 +1,160 @@
+// Calibration
+.calibration {
+  position: relative;
+  min-height: calc(650px - 40px);
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto 0 auto;
+  @include xs {
+    max-width: 100%;
+    margin: 16px auto 0 auto;
+    min-height: 100%;
+  }
+}
+
+// Calibration / Content
+.calibration-content {
+  width: calc(400px - 32px);
+  @include vertical-align--center;
+  @include xs {
+    width: 100%;
+    @include vertical-align--none;
+  }
+}
+
+// Calibration / Title
+.calibration-title {
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 400;
+  span {
+    font-weight: 700;
+  }
+}
+.calibration-title--selectbox {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 0 24px;
+  span {
+    color: #25bdb8;
+  }
+}
+
+// Calibration / Desc
+.calibration-desc {
+  width: 120px;
+  display: block;
+  margin: 16px auto 0 auto;
+  font-size: 12px;
+  text-align: center;
+  line-height: 16px;
+  color: #979797;
+}
+
+// Calibration / Media
+.calibration-media {
+  border-radius: 3px;
+  padding: 16px 0;
+  text-align: center;
+  line-height: 0;
+  border: 2px solid #2f3232;
+  @include pattren;
+}
+.calibration-media__title {
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 16px;
+  line-height: 24px;
+}
+.calibration-media__image {
+  display: inline-block;
+  line-height: 0;
+  height: 128px;
+  img {
+    width: auto;
+    height: 128px;
+  }
+}
+.calibration-media--horizontal {
+  .calibration-media__title {
+    padding-bottom: 0px;
+    text-align: left;
+    padding-left: 16px;
+  }
+  .calibration-media--margin {
+    margin-bottom: 16px;
+  }
+}
+
+// Calibration / Joystick
+.calibration-joystick {
+  margin-top: 16px;
+}
+
+// Calibration / Buttons
+.calibration-buttons {
+  margin-top: 16px;
+}
+
+// Calibration / Slide Module
+.calibration--slide-module {
+  .calibration-content--step-2 {
+    .calibration-title {
+      max-width: 240px;
+      margin: 16px auto 16px auto;
+      display: block;
+    }
+  }
+}
+
+// Calibration / JibONE
+.calibration--jibone {
+  .form-field--select {
+    width: calc(100% - 24px);
+  }
+  .calibration-content--step-1 {
+    .calibration-title {
+      margin-top: 0;
+    }
+    .calibration-media {
+      padding: 40px 0;
+      border: 0;
+      background: none;
+    }
+    .calibration-media__image {
+      height: 104px;
+      img {
+        height: 104px;
+      }
+    }
+  }
+  .calibration-content--step-2 {
+    .calibration-media {
+      padding: 0;
+      border: 0;
+      background: none;
+    }
+  }
+}
+.calibration-content-jib-length {
+  margin-bottom: 40px;
+  .calibration-media__image {
+    height: 136px;
+    img {
+      height: 136px;
+    }
+  }
+}
+.calibration-content-rod-length {
+  margin-bottom: 40px;
+  .calibration-media__image {
+    height: 204px;
+    img {
+      height: 204px;
+    }
+  }
+}

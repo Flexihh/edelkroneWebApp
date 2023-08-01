@@ -1,0 +1,71 @@
+// Keypose Numeric
+.keypose-numeric {
+  padding: 18px;
+}
+.keypose-numeric__title {
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  padding-bottom: 8px;
+}
+
+// Keypose Numeric / Modal
+.keypose-numeric-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.keypose-numeric-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.keypose-numeric-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.keypose-numeric-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 448px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 2px #2f3232;
+  @include pattren;
+}
+.keypose-numeric-modal__close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  z-index: 4;
+  top: 11px;
+  right: 10px;
+  cursor: pointer;
+  line-height: 0;
+  img {
+    margin: 6px;
+    padding-top: 2px;
+    width: 18px;
+  }
+}

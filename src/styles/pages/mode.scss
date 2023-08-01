@@ -1,0 +1,223 @@
+// Mode
+.mode {
+  position: relative;
+  min-height: calc(650px - 40px);
+  padding-left: 16px;
+  padding-right: 16px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 40px auto 0 auto;
+  @include xs {
+    max-width: 100%;
+    margin: 16px auto 0 auto;
+    min-height: 100%;
+  }
+}
+.mode--park {
+  .mode-content {
+    padding-bottom: 40px;
+    @include xs {
+      padding-bottom: 0;
+    }
+  }
+}
+.mode--step-1,
+.mode--step-2,
+.mode--step-3,
+.mode--step-4 {
+  .mode-content {
+    padding-bottom: 56px;
+    @include xs {
+      padding-bottom: 0;
+    }
+  }
+}
+.mode--step-1 {
+  .mode-content__buttons {
+    width: 252px;
+    display: inline-block;
+    .button {
+      margin-top: 6px;
+    }
+    .button:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+.mode--step-4 {
+  .mode-content__desc {
+    > div > div {
+      display: inline-block;
+      text-align: left;
+    }
+  }
+}
+
+// Mode / Content
+.mode-content {
+  line-height: 0;
+  width: calc(400px - 32px);
+  @include vertical-align--center;
+  @include xs {
+    width: 100%;
+    @include vertical-align--none;
+  }
+}
+
+// Mode / Content / Loading
+.mode-content__loading {
+  .icon {
+    display: inline-block;
+    line-height: 0;
+    img {
+      height: 56px;
+    }
+  }
+}
+
+// Mode / Content / Title
+.mode-content__title {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 20px;
+  span {
+    font-weight: 700;
+  }
+  div {
+    padding-top: 16px;
+  }
+  div:last-child {
+    padding-bottom: 0;
+  }
+}
+.mode-content__title--warning {
+  color: #ff5454;
+}
+
+// Mode / Content / Desc
+.mode-content__desc {
+  width: 100%;
+  display: table;
+  min-height: 136px;
+  overflow: hidden;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 300;
+  > div {
+    display: table-cell;
+    vertical-align: middle;
+    > div {
+      padding-top: 16px;
+    }
+    > div:last-child {
+      padding-bottom: 0;
+    }
+  }
+  span {
+    font-weight: 700;
+  }
+}
+.mode-content__desc-mini {
+  text-align: left;
+  color: #979797;
+  font-size: 14px;
+  line-height: 20px;
+  div {
+    padding-top: 16px;
+  }
+}
+
+// Mode / Content / Dots
+.mode-content-dots {
+  margin-top: 8px;
+  display: inline-block;
+  height: 10px;
+  line-height: 0;
+}
+.mode-content-dots__item {
+  width: 10px;
+  height: 10px;
+  background: #171b1b;
+  display: inline-block;
+  border-radius: 10px;
+  margin: 0 3px;
+  border: 1px solid #2f3232;
+}
+.mode-content-dots--1 {
+  .mode-content-dots__item:nth-child(1) {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
+  }
+}
+.mode-content-dots--2 {
+  .mode-content-dots__item:nth-child(1),
+  .mode-content-dots__item:nth-child(2) {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
+  }
+}
+.mode-content-dots--3 {
+  .mode-content-dots__item:nth-child(1),
+  .mode-content-dots__item:nth-child(2),
+  .mode-content-dots__item:nth-child(3) {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
+  }
+}
+.mode-content-dots--4 {
+  .mode-content-dots__item:nth-child(1),
+  .mode-content-dots__item:nth-child(2),
+  .mode-content-dots__item:nth-child(3),
+  .mode-content-dots__item:nth-child(4) {
+    border-color: rgba(255,255,255,0.6);
+    background: rgba(255,255,255,0.6);
+  }
+}
+
+// Mode / Content / Media
+.mode-content-media {
+  width: 100%;
+  border-radius: 3px;
+  margin-top: 14px;
+  padding: 8px;
+  text-align: center;
+  line-height: 0;
+  border: 2px solid #2f3232;
+  @include pattren;
+}
+.mode-content-media__image {
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  &:before {
+    display: block;
+    content: "";
+    padding-top: 70.59%
+  }
+  img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+}
+
+// Mode / Content / Buttons
+.mode-content__buttons {
+  padding-top: 16px;
+}
+
+// Mode / Content / Warning
+.mode-content__warning {
+  padding-top: 16px;
+  font-size: 12px;
+  line-height: 20px;
+  color: #ff5454;
+}

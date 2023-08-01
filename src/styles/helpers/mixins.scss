@@ -1,0 +1,27 @@
+// Mixins
+@mixin truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@mixin vertical-align--center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+@mixin vertical-align--none {
+  position: relative;
+  top: auto;
+  transform: none;
+}
+@mixin pattren($backgroundColor: #171b1b, $lineColor: rgba(0,0,0,0.25)) {
+  background-color: $backgroundColor;
+  background-image: repeating-linear-gradient(-45deg, $lineColor, $lineColor 1px, transparent 1px, transparent 5px);
+  background-size: 7px 7px;
+}
+@mixin transform-scale {
+  transform: scale(1);
+  *, *:before, *:after {
+    transform: scale(1);
+  }
+}

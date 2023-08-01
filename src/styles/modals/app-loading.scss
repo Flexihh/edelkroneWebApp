@@ -1,0 +1,80 @@
+// App Loading
+.app-loading {
+  line-height: 0;
+  .icon {
+    display: inline-block;
+    line-height: 0;
+    img {
+      height: 40px;
+    }
+  }
+}
+
+// App Loading / Header
+.app-loading-header {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 0;
+  text-align: center;
+  margin-top: 8px;
+}
+.app-loading-header__icon {
+  line-height: 0;
+  margin-bottom: -4px;
+  svg {
+    fill: #ffffff;
+    height: 16px;
+  }
+}
+.app-loading-header__title {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.app-loading-header__version {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #979797;
+  line-height: 12px;
+}
+
+// App Loading / Modal
+.app-loading-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.app-loading-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: #000000;
+  @include xs {
+    position: fixed;
+  }  
+}
+.app-loading-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.app-loading-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  margin: 0px auto;
+  overflow: auto;
+}

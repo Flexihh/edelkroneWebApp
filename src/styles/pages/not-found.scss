@@ -1,0 +1,22 @@
+// Not Found
+.not-found {
+  text-align: center;
+  line-height: 0;
+  color: #979797;
+  width: 480px;
+  padding: 80px 0;
+  @include vertical-align--center;
+  @include xs {
+    @include vertical-align--none;
+  }
+}
+.not-found__title {
+  font-size: 80px;
+  line-height: 60px;
+  font-weight: 700;
+}
+.not-found__desc {
+  margin-top: 8px;
+  font-size: 18px;
+  line-height: 18px;
+}

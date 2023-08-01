@@ -1,0 +1,61 @@
+// Canbus Member Device
+.canbus-member-device {
+  padding: 42px;
+}
+.canbus-member-device__title {
+  line-height: 24px;
+  font-size: 20px;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+.canbus-member-device__desc {
+  color: #979797;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+// Canbus Member Device / Modal
+.canbus-member-device-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.canbus-member-device-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.canbus-member-device-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.canbus-member-device-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 448px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 2px #2f3232;
+  @include pattren;
+}

@@ -1,0 +1,48 @@
+// Error
+.error {
+  text-align: center;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  @include vertical-align--center;
+  .button {
+    max-width: 186px;
+  }
+  @include xs {
+    @include vertical-align--none;
+  }
+}
+.error--done {
+  .error-content__title {
+    color: #25bdb8;
+  }
+}
+.error-content {
+  width: calc(400px - 32px);
+  margin: 0 auto;
+}
+.error-content__title {
+  color: #ff5454;
+  line-height: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  padding-bottom: 16px;
+}
+.error-content__desc {
+  color: #979797;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 24px;
+}
+
+// Screen
+.screen--loading--wireless .error,
+.screen--loading--canbus .error {
+  margin-top: 0;
+}
+.screen--firmware-update .error,
+.screen--firmware-update--device .error,
+.screen--firmware-update--radio .error {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,78 @@
+// Vision Stream
+.vision-stream {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: #171b1b;
+  text-align: center;
+}
+
+// Vision Stream / Area
+.vision-stream-area {
+  position: relative;
+  display: block;
+  // overflow: hidden;
+  line-height: 0;
+  z-index: 1;
+  top: 50%;
+  transform: translateY(-50%);
+  &:before {
+    display: block;
+    content: "";
+    padding-top: 56.25%;
+  }
+  > img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    border: 0;
+  }
+}
+.vision-stream-area--fit {
+  top: auto;
+  transform: none;
+  &:before {
+    padding-top: calc(100vh - 46px);
+  }
+}
+
+// Vision Stream / Footer
+.vision-stream-footer {
+  background: #000000;
+  position: absolute;
+  bottom: -46px;
+  right: 0;
+  width: 100%;
+  height: 46px;
+  z-index: 2;
+}
+
+// Vision Stream / Area / Button
+.vision-stream-area__quality,
+.vision-stream .box-content__item--copy {
+  position: absolute;
+  left: 8px;
+  bottom: 8px;
+  background: transparent;
+  line-height: 20px;
+  z-index: 2;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 4px 14px;
+  border: 1px solid #ffffff;
+  border-radius: 3px;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+.vision-stream .box-content__item--copy {
+  left: auto;
+  right: 8px;
+  padding: 4px 34px 4px 14px;
+  text-transform: none;
+  .icon {
+    top: 5px;
+    right: 14px;
+  }
+}

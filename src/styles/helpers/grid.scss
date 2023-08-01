@@ -1,0 +1,126 @@
+// Grid
+
+// xl
+.wrap {
+  @include wrap;
+}
+.col {
+  @include col;
+}
+
+.xl-left {
+  @include wrap("left");
+}
+.xl-right {
+  @include wrap("right");
+}
+.xl-center {
+  @include wrap("center");
+}
+.xl-middle {
+  @include wrap("middle");
+}
+.xl-flexbox {
+  @include wrap("flexbox");
+}
+.xl-between {
+  @include wrap("between");
+}
+
+.xl-gutter-6 {
+  @include wrap("gutter", 6);
+}
+.xl-gutter-8 {
+  @include wrap("gutter", 8);
+}
+.xl-gutter-16 {
+  @include wrap("gutter", 16);
+}
+.xl-gutter-40 {
+  @include wrap("gutter", 40);
+}
+
+.xl-table {
+  @include wrap("table");
+}
+.xl-width-28 {
+  width: 28px;
+}
+.xl-width-80 {
+  width: 80px;
+}
+.xl-width-100 {
+  width: 100px;
+}
+.xl-width-134 {
+  width: 134px;
+}
+.xl-width-174 {
+  width: 174px;
+}
+.xl-width-192 {
+  width: 192px;
+}
+.xl-width-480 {
+  width: 480px;
+}
+
+.xl-1 {
+  @include wrap(1);
+}
+.xl-2 {
+  @include wrap(2);
+}
+.xl-3 {
+  @include wrap(3);
+}
+.xl-4 {
+  @include wrap(4);
+}
+.xl-5 {
+  @include wrap(5);
+}
+
+.xl-1-5 {
+  @include col(1, 5);
+}
+.xl-2-5 {
+  @include col(2, 5);
+}
+.xl-3-5 {
+  @include col(3, 5);
+}
+.xl-4-5 {
+  @include col(4, 5);
+}
+.xl-6-10 {
+  @include col(6, 10);
+}
+.xl-7-10 {
+  @include col(7, 10);
+}
+.xl-6-13 {
+  @include col(6, 13);
+}
+.xl-7-13 {
+  @include col(7, 13);
+}
+
+// xs
+@media (max-width: 700px) {
+  .xs-normal {
+    @include wrap("normal");
+  }
+  .xs-hidden {
+    @include col("hidden");
+  }
+  .xs-center {
+    @include wrap("center");
+  }
+  .xs-1 {
+    @include wrap(1);
+  }
+  .xs-2 {
+    @include wrap(2);
+  }
+}

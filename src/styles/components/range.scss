@@ -1,0 +1,143 @@
+// Range
+.range {
+  text-align: center;
+  padding: 8px 16px;
+  line-height: 0;
+  height: 64px;
+  @include pattren;
+  img {
+    width: 100%;
+  }
+  @include transform-scale;
+}
+
+// Screen
+.screen--control-screen--keypose .range {
+  margin-bottom: 6px;
+}
+.screen--control-screen--keypose .range:last-child {
+  margin-bottom: 0;
+}
+
+// Range / Input
+.range-input {
+  position: relative;
+  input[type=range] {
+    position: relative;
+    width: calc(100% - 4px);
+    margin: 0 auto;
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 15px 0;
+  }
+  input[type=range]:focus {
+    outline: none;
+  }
+  input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 18px;
+    border-radius: 18px;
+    background-image: linear-gradient(90deg, #25bdb8 0%, #fe5454 100%);
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 18px;
+    border-radius: 18px;
+    background-image: linear-gradient(90deg, #25bdb8 0%, #fe5454 100%);
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  input[type=range]::-webkit-slider-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: -15px;
+    border: 0;
+    background: transparent;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }
+  input[type=range]::-moz-range-thumb {
+    width: 48px;
+    height: 48px;
+    border-radius: 48px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin-top: -15px;
+    border: 0;
+    background: transparent;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+  }  
+}
+.range-input__circle {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 48px;
+  pointer-events: none;
+  background: #00aea8;
+  box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.8);
+}
+.range-input__circle-inner {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-image: linear-gradient(0deg, #40c2be 0%, #018581 100%);
+  box-shadow: inset 0px -1px 1px 0px rgba(255, 255, 255, 0.5), inset 0px 1px 1px 0px rgba(0, 0, 0, 0.1);
+  &::before {
+    display: block;
+    font-size: 9px;
+    font-weight: 700;
+    text-align: center;
+  }
+}
+
+// Range / Speed
+.range--speed {
+  .range-input__circle-inner::before {
+    content: "SPEED";
+    line-height: 40px;
+  }
+}
+
+// Range / Acceleration
+.range--acceleration {
+  .range-input {
+    transform: scaleX(-1);
+    input[type=range]::-webkit-slider-runnable-track {
+      background-image: linear-gradient(90deg, #fe5454 0%, #25bdb8 100%);
+    }
+    input[type=range]::-moz-range-track {
+      background-image: linear-gradient(90deg, #fe5454 0%, #25bdb8 100%);
+    }
+  }
+  .range-input__circle-inner::before {
+    padding: 11px 0;
+    content: "EASE IN/OUT";
+    line-height: 9px;
+    transform: scaleX(-1);
+  }
+}

@@ -1,0 +1,251 @@
+// Keypose
+.keypose {
+  position: relative;
+  width: 448px;
+  height: 300px;
+  overflow: hidden;
+  @include transform-scale;
+}
+
+// Keypose / Draw
+.keypose__draw {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 448px;
+  height: 300px;
+  cursor: grab;
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:active {
+    cursor: grabbing;
+  }
+}
+
+// Keypose / Stop
+.keypose__stop {
+  position: absolute;
+  z-index: 4;
+  top: 0;
+  left: 0;
+  width: 448px;
+  height: 300px;
+  cursor: pointer;
+}
+
+// Keypose / Items
+.keypose__items {
+  position: relative;
+  z-index: 1;
+  width: 448px;
+  height: 300px;
+}
+
+// Keypose / Item
+.keypose-item {
+  position: absolute;
+  cursor: pointer;
+  width: 145.5px;
+  height: 144px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-radius: 3px;
+  background-image: linear-gradient(0deg, #101111 0%, #212929 100%);
+  box-shadow: inset 0px 6px 3px -6px rgba(255,255,255,0.25);
+  text-align: center;
+  overflow: hidden;
+}
+.keypose-item:nth-child(1) {
+  top: 0;
+  left: 0;
+}
+.keypose-item:nth-child(2) {
+  top: 0;
+  left: 50%;
+  margin-left: -72.5px
+}
+.keypose-item:nth-child(3) {
+  top: 0;
+  right: 0;
+}
+.keypose-item:nth-child(4) {
+  bottom: 0;
+  left: 0;
+}
+.keypose-item:nth-child(5) {
+  bottom: 0;
+  left: 50%;
+  margin-left: -72.5px
+}
+.keypose-item:nth-child(6) {
+  bottom: 0;
+  right: 0;
+}
+.keypose-item__title {
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 36px;
+}
+.keypose-item__time {
+  position: absolute;
+  z-index: 3;
+  bottom: 1px;
+  left: 1px;
+  border-radius: 0 3px 0 0;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 0 8px 1px 9px;
+  line-height: 24px;
+  background: #eab933;
+}
+.keypose-item__loading {
+  position: absolute;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  left: 0;
+  height: calc(144px - 4px);
+  margin: 2px;
+  transition-property: all;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+  width: 0%;
+}
+.keypose-item--active {
+  background-image: linear-gradient(0deg, rgba(35,114,112,1) 0%, rgba(50,128,126,1) 100%);
+  box-shadow: inset 0px 1px 1px 0px rgba(255, 255, 255, 0.1);
+}
+.keypose-item--loop {
+  box-shadow: inset 0 0 0 2px #eab933;
+}
+
+// Keypose / Icon Info
+.keypose__icon-info {
+  position: absolute;
+  width: 32px;
+  text-align: center;
+  line-height: 0;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 3;
+  cursor: pointer;
+  img {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    margin-left: 8px;
+    width: 24px;
+  }
+}
+.keypose__icon-info--0 {
+  top: 3px;
+  left: 0;
+}
+.keypose__icon-info--1 {
+  top: 3px;
+  left: 152px;
+}
+.keypose__icon-info--2 {
+  top: 3px;
+  left: 303px;
+}
+.keypose__icon-info--3 {
+  top: 153px;
+  left: 0;
+}
+.keypose__icon-info--4 {
+  top: 153px;
+  left: 152px;
+}
+.keypose__icon-info--5 {
+  top: 153px;
+  left: 303px;
+}
+
+// Keypose / Icon Remove
+.keypose__icon-remove {
+  position: absolute;
+  width: 30px;
+  text-align: center;
+  line-height: 0;
+  font-size: 12px;
+  font-weight: 700;
+  z-index: 3;
+  cursor: pointer;
+  img {
+    margin: 12px 12px 12px 0;
+    width: 18px;
+  }
+}
+.keypose__icon-remove--0 {
+  top: 3px;
+  right: 302px;
+}
+.keypose__icon-remove--1 {
+  top: 3px;
+  right: 151px;
+}
+.keypose__icon-remove--2 {
+  top: 3px;
+  right: 0;
+}
+.keypose__icon-remove--3 {
+  top: 153px;
+  right: 302px;
+}
+.keypose__icon-remove--4 {
+  top: 153px;
+  right: 151px;
+}
+.keypose__icon-remove--5 {
+  top: 153px;
+  right: 0;
+}
+
+// Keypose / Sure
+.keypose__sure {
+  position: absolute;
+  width: 145.5px;
+  height: 144px;
+  line-height: 144px;
+  text-align: center;
+  background: rgba(255,84,84,0.8);
+  font-size: 24px;
+  font-weight: 700;
+  z-index: 3;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 3px;
+}
+.keypose__sure--0 {
+  top: 3px;
+  left: 0;
+}
+.keypose__sure--1 {
+  top: 3px;
+  left: 152px;
+}
+.keypose__sure--2 {
+  top: 3px;
+  left: 303px;
+}
+.keypose__sure--3 {
+  top: 153px;
+  left: 0;
+}
+.keypose__sure--4 {
+  top: 153px;
+  left: 152px;
+}
+.keypose__sure--5 {
+  top: 153px;
+  left: 303px;
+}

@@ -1,0 +1,57 @@
+// Home
+.home {
+  text-align: center;
+  line-height: 0;
+  max-width: 700px;
+  width: 100%;
+  padding: 80px 0;
+  @include vertical-align--center;
+  @include xs {
+    @include vertical-align--none;
+  }
+}
+
+// Screen
+.screen--home {
+  background-color: #000000;
+}
+
+// Home / Header
+.home-header {
+  display: inline-block;
+  text-decoration: none;
+  line-height: 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.home-header__icon {
+  line-height: 0;
+  margin-bottom: -4px;
+  svg {
+    fill: #ffffff;
+    height: 16px;
+  }
+}
+.home-header__title {
+  line-height: 24px;
+  font-size: 18px;
+  font-weight: 700;
+}
+.home-header__version {
+  padding-top: 6px;
+  font-size: 12px;
+  color: #979797;
+  line-height: 12px;
+}
+
+// Home / Buttons
+.home-buttons {
+  max-width: 300px;
+  margin: 0 auto;
+  .button {
+    margin-bottom: 6px;
+  }
+  .button:last-child {
+    margin-bottom: 0;
+  }
+}

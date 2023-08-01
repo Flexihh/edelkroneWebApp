@@ -1,0 +1,109 @@
+// Settings
+
+// Settings / Header
+.settings-header {
+  background: #000000;
+  @include pattren(rgba(37, 189, 184, 0.1));
+}
+.settings-header__item {
+  position: relative;
+  padding: 24px 0 22px 0;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  color: #979797;
+}
+.settings-header__item--active {
+  color: #ffffff;
+  &::before {
+    position: absolute;
+    content: "";
+    left: 2px;
+    right: 2px;
+    bottom: -2px;
+    height: 2px;
+    background: #1c5d5b;
+  }
+}
+
+// Settings / Item
+.settings-item {
+  padding: 0 20px;
+  border-bottom: 1px solid #2f3232;
+}
+.settings-item__title {
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 46px;
+}
+.settings-item__value {
+  padding: 8px 0;
+  font-weight: 700;
+  font-size: 14px;
+  text-align: center;
+  max-width: 160px;
+  margin: 0 auto;
+  .input {
+    width: 100%;
+    background: #000000;
+    color: #ffffff;
+    font-weight: 700;
+    height: 46px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 3px;
+    padding-right: 4px;
+    padding-left: 4px;
+    border: 1px solid #1c5d5b;
+  }
+}
+
+// Settings / Footer
+.settings-footer {
+  padding: 16px 20px 14px 20px;
+}
+
+// Settings / Modal
+.settings-modal-mask {
+  position: absolute;
+  z-index: 10003;
+  top: 0;
+  left: 0;
+  width: 100%;
+  line-height: 24px;
+  display: table;
+  @include xs {
+    position: fixed;
+  }
+}
+.settings-modal-mask__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: table;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6);
+  @include xs {
+    position: fixed;
+  }  
+}
+.settings-modal-wrapper {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  display: table-cell;
+  vertical-align: middle;
+  padding: 16px;
+}
+.settings-modal-container {
+  position: relative;
+  pointer-events: auto;
+  width: 100%;
+  max-width: 400px;
+  margin: 0px auto;
+  overflow: auto;
+  border-radius: 3px;
+  box-shadow: inset 0px 0px 0px 2px #2f3232;
+  @include pattren;
+}

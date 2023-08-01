@@ -1,0 +1,24 @@
+// Loading
+.loading {
+  text-align: center;
+  left: 0;
+  right: 0;
+  line-height: 0;
+  @include vertical-align--center;
+  .icon {
+    display: inline-block;
+    line-height: 0;
+    img {
+      height: 56px;
+    }
+  }
+  @include xs {
+    @include vertical-align--none;
+  }
+}
+.loading__message {
+  padding-top: 8px;
+  font-size: 12px;
+  line-height: 18px;
+  color: #25bdb8;
+}
