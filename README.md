@@ -5,7 +5,7 @@ This repository is a fork of the official edelkrone Web App, released by edelkro
 
 ---
 
-## Original
+## Edelkrone ReadMe
 
 We developed the edelkrone Web App not only as a final product that our end-users can use to simply control their edelkrone motion control systems on a personal computer, but also to showcase the limitless capabilities of edelkrone SDK. Each API call to edelkrone SDK that we use in edelkrone Web App is openly documented. The source code of the edelkrone Web App itself is released as open source under MIT license. You may refer to the source code when developing your own web or other platform based software.
 
